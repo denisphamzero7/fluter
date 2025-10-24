@@ -1,8 +1,11 @@
+import 'package:app_02/App.dart';
+import 'package:app_02/AppNew.dart';
 import 'package:app_02/MyAppBar.dart';
 import 'package:app_02/MyButton.dart';
 import 'package:app_02/MyColumnAndRow.dart';
 import 'package:app_02/MyContainer.dart';
 import 'package:app_02/MyText.dart';
+import 'package:app_02/MyTextField.dart';
 import 'package:app_02/Mybutton2.dart';
 import 'package:flutter/material.dart';
 import 'MyScaffold.dart';
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Mybutton2(),
+      home: const AppNew(),
     );
   }
 }
