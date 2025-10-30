@@ -1,5 +1,14 @@
 import 'package:app_02/App.dart';
-import 'package:app_02/AppNew.dart';
+import 'package:app_02/App/AppNew.dart';
+import 'package:app_02/App/ListViewPage.dart';
+import 'package:app_02/App/MainShell.dart';
+import 'package:app_02/App/PostDetailScreen.dart';
+import 'package:app_02/App/camera/camera_scan_screen.dart';
+import 'package:app_02/App/company/screens/company_list_screen.dart';
+import 'package:app_02/App/create_feedback_screen.dart';
+import 'package:app_02/App/auth/screens/login.dart';
+import 'package:app_02/App/auth/screens/register.dart';
+import 'package:app_02/Form/PostFormScreen.dart';
 import 'package:app_02/MyAppBar.dart';
 import 'package:app_02/MyButton.dart';
 import 'package:app_02/MyColumnAndRow.dart';
@@ -7,9 +16,12 @@ import 'package:app_02/MyContainer.dart';
 import 'package:app_02/MyText.dart';
 import 'package:app_02/MyTextField.dart';
 import 'package:app_02/Mybutton2.dart';
+
 import 'package:flutter/material.dart';
-import 'MyScaffold.dart';
+import '../MyScaffold.dart';
+import 'auth/screens/auth_check_screen.dart';
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -39,7 +51,19 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const AppNew(),
+      home: const AuthCheckScreen(),
+      routes: {
+        '/detail': (context) => const PostDetailScreen(),
+        '/form': (context) => const PostFormScreen(),
+        '/create-feedback': (context) => const AddFeedbackScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/register': (context) => const RegisterScreen(),
+        '/company': (context) => const CompanyListScreen(),
+        '/scanner_cccd': (context) => const CameraScanScreen(),
+        // '/scanner_cccd': (context) => const CameraScanScreen(),
+
+
+      },
     );
   }
 }

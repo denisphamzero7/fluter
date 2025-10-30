@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-class MyText extends StatelessWidget{
-  const MyText({super.key}); // constructor trùng với class
-  // ctrl +  space : ra được override
+
+// SỬA TÊN CLASS TẠI ĐÂY
+class MyTextField extends StatelessWidget{
+  const MyTextField({super.key}); // SỬA CẢ TÊN HÀM CONSTRUCTOR
+
   @override
   Widget build(BuildContext context) {
-    // trả về scaffold - widget cung cấp bố cục material design cơ bản
-    // màn hình
+    // tr
     return Scaffold(
       // tiêu đề của ứng dụng
       appBar: AppBar(

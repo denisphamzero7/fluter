@@ -14,7 +14,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
+    dependencies {
+        // ...
+        implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.0")
+    }
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
